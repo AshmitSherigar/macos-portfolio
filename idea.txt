@@ -1,0 +1,75 @@
+winux operating system - idea
+	mix of both windows(how it looks) and Linux(how it thinks)
+
+Key System Features
+	Lock Screen & User Session
+		Lock screen with login
+		Each login loads a personal system state
+		User-specific files, settings, and wallpaper
+		Simulates an OS boot → desktop flow
+
+Desktop Environment
+	Full-screen desktop UI
+	Wallpaper support
+	Desktop icons for apps
+	Taskbar with:
+	Running apps
+	Active window highlight
+	Clock
+
+Window Management
+	Open, close, minimize, maximize windows
+	Draggable and resizable windows
+	Z-index handling (active window comes to front)
+	Multiple apps running simultaneously
+
+Main Applications in Focus
+	1. File Explorer
+		Purpose: Core file system interaction
+		Features:
+			Folder and file hierarchy (tree structure)
+			Create, rename, delete files and folders
+			Navigate using sidebar (Documents, Pictures, etc.)
+			Double-click to open files
+			Shared file system with all apps
+			Linux-inspired clean directory structure
+
+2. Settings
+	Purpose: Personalize the system
+	Features:
+		Change wallpaper
+		Light / Dark theme
+		System preferences storage
+		User-specific configuration persistence
+		Minimal and focused (no over-engineering)
+
+3. Camera
+	Purpose: Real-world interaction with the OS
+	Features:
+		Access browser camera
+		Capture photos
+		Save images directly into the file system
+		Permissions-based camera access
+		Creates real files used by other apps
+
+4. Image Viewer / Editor
+	Purpose: View and interact with images
+	Features:
+		Open images from File Explorer
+		Zoom in / out
+		Rotate images
+		Fullscreen view
+		Basic editing (crop, rotate, save)
+		Image navigation (next / previous)
+		Windows-Inspired Features (Look & Feel)
+		Desktop + icons
+
+Taskbar
+	Window controls
+	File Explorer UI style
+	Linux-Inspired Features (Logic & Structure)
+	Clean folder hierarchy
+	Logical file paths
+	Terminal-friendly design (optional later)
+	Simple permission concepts (owner-based)
+
