@@ -15,9 +15,8 @@ const Finder = () => {
     <div>
       <h3>{name}</h3>
       {items.map((item) => (
-        <ul>
+        <ul key={item.id}>
           <li
-            key={item.id}
             onClick={() => setActiveLocation(item)}
             className={clsx(
               item.id === activeLocation.id ? 'active' : 'not-active',
@@ -36,7 +35,7 @@ const Finder = () => {
     if (['fig', 'url'].includes(item.fileType) && item.href)
       return window.open(item.href, '_blank');
 
-    openWindow(`${item.fileType}${item.kind}`, 'item');
+    openWindow(`${item.fileType}${item.kind}`, item);
   };
   return (
     <>
