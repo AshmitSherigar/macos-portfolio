@@ -26,6 +26,7 @@ const App = () => {
       <Finder />
       <Text />
       <ImageContent />
+      <Contact />
     </main>
   );
 };
