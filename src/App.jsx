@@ -1,8 +1,9 @@
 import React from 'react';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
-import { Navbar, Welcome, Dock } from './components';
+import { Navbar, Welcome, Dock, Home } from './components';
 import {
+  Contact,
   Finder,
   ImageContent,
   Resume,
@@ -27,6 +28,7 @@ const App = () => {
       <Text />
       <ImageContent />
       <Contact />
+      <Home />
     </main>
   );
 };
