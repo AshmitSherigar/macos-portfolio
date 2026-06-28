@@ -5,6 +5,7 @@ import { Navbar, Welcome, Dock, Home } from './components';
 import {
   Contact,
   Finder,
+  Gallery,
   ImageContent,
   Resume,
   Safari,
@@ -25,6 +26,7 @@ const App = () => {
       <Safari />
       <Resume />
       <Finder />
+      <Gallery />
       <Text />
       <ImageContent />
       <Contact />
