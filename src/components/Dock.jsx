@@ -67,10 +67,17 @@ const Dock = () => {
 
   const toggleApp = (app) => {
     if (!app.canOpen) return;
-    if (app.id == 'trash') {
-      const trash = Object.values(locations)[3];
-      setActiveLocation(trash);
-      openWindow('finder');
+    if (app.id === 'trash') {
+      const finder = windows.finder;
+
+      if (finder.isOpen) {
+        closeWindow('finder');
+      } else {
+        setActiveLocation(locations.trash);
+        openWindow('finder');
+      }
+
+      return;
     } else {
       const window = windows[app.id];
       if (window.isOpen) {
