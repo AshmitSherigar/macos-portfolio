@@ -11,27 +11,31 @@ import {
   Safari,
   Terminal,
   Text,
+  Preloader
 } from './windows';
 
 gsap.registerPlugin(Draggable);
 
 const App = () => {
   return (
-    <main>
-      <Navbar />
-      <Welcome />
-      <Dock />
+    <>
+      <main>
+      <Preloader/>
+        <Navbar />
+        <Welcome />
+        <Dock />
 
-      <Terminal />
-      <Safari />
-      <Resume />
-      <Finder />
-      <Gallery />
-      <Text />
-      <ImageContent />
-      <Contact />
-      <Home />
-    </main>
+        <Terminal />
+        <Safari />
+        <Resume />
+        <Finder />
+        <Gallery />
+        <Text />
+        <ImageContent />
+        <Contact />
+        <Home />
+      </main>
+    </>
   );
 };
 
