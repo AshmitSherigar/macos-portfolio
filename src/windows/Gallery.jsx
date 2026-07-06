@@ -29,7 +29,7 @@ const Gallery = () => {
             ))}
           </ul>
         </div>
-        <div className="gallery">
+        <div className="gallery flex-1">
           <ul>
             {gallery.map(({ id, img }) => (
               <li

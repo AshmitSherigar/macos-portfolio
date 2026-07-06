@@ -267,14 +267,16 @@ body {
     }
 
     .gallery {
-      @apply p-5;
+      @apply p-5 h-96;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply h-full grid grid-cols-5 grid-rows-5 gap-1.5;
 
         li {
-          img {
-            @apply size-full object-cover rounded-lg;
+        @apply h-full w-full overflow-hidden rounded-lg;
+      
+        img {
+            @apply w-full h-full object-cover;
           }
 
           &:first-child {
