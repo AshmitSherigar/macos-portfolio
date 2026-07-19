@@ -7,6 +7,7 @@ import ImageContent from './ImageContent';
 import Contact from './Contact';
 import Gallery from './Gallery';
 import Preloader from './Preloader';
+import Camera from './Camera';
 
 export {
   Terminal,
@@ -17,5 +18,6 @@ export {
   ImageContent,
   Contact,
   Gallery,
+  Camera,
   Preloader
 };

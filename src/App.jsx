@@ -11,7 +11,8 @@ import {
   Safari,
   Terminal,
   Text,
-  Preloader
+  Preloader,
+  Camera
 } from './windows';
 
 gsap.registerPlugin(Draggable);
@@ -33,6 +34,7 @@ const App = () => {
         <Text />
         <ImageContent />
         <Contact />
+        <Camera />
         <Home />
       </main>
     </>
