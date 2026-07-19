@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { WindowControls } from '../components';
 import WindowWrapper from '../hoc/WindowWrapper';
-import WebcamCapture from '../components/WebcamCapture';
+import {WebcamCapture} from '../components';
 import clsx from 'clsx';
 import useWindowStore from '../store/window';
 
