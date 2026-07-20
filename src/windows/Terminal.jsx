@@ -4,7 +4,7 @@ import { techStack } from '../constants';
 import { Check, Flag } from 'lucide-react';
 import { WindowControls } from '../components';
 
-const Terminal = () => {
+const Terminal = React.memo(() => {
   return (
     <>
       <div id="window-header">
@@ -13,7 +13,7 @@ const Terminal = () => {
       </div>
       <div className="techstack">
         <p>
-          <span className="font-bold">@ashmit % </span>
+          <span className="font-bold">@ashmit_sherigar % </span>
           show tech stack
         </p>
         <div className="label">
@@ -43,13 +43,13 @@ const Terminal = () => {
           </p>
           <p className="text-black">
             <Flag size={15} fill="black" />
-            Render time: 6ms
+            Render time: {Math.floor(Math.random() * (6 - 1 + 1)) + 1}ms
           </p>
         </div>
       </div>
     </>
   );
-};
+});
 
 const TerminalWindow = WindowWrapper(Terminal, 'terminal');
 export default TerminalWindow;
