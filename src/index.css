@@ -1,22 +1,20 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import 'tailwindcss';
 
 html,
 body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: url('/images/wallpaper.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @theme {
-  --font-georama: "Georama", sans-serif;
-  --font-roboto: "Roboto Mono", monospace;
+  --font-georama: 'Georama', sans-serif;
+  --font-roboto: 'Roboto Mono', monospace;
   --breakpoint-3xl: 1920px;
 }
 
@@ -273,14 +271,17 @@ body {
         @apply h-full grid grid-cols-5 grid-rows-5 gap-1.5;
 
         li {
-        @apply h-full w-full overflow-hidden rounded-lg;
-      
-        img {
+          @apply h-full w-full overflow-hidden rounded-lg;
+
+          img {
             @apply w-full h-full object-cover;
           }
 
           &:first-child {
             @apply row-start-1 row-span-3 col-start-1 col-span-3;
+            img {
+              @apply object-[50%_80%];
+            }
           }
 
           &:nth-child(2) {
@@ -289,6 +290,9 @@ body {
 
           &:nth-child(3) {
             @apply row-start-4 row-span-2 col-start-3 col-span-3;
+            img {
+              @apply object-[50%_45%];
+            }
           }
 
           &:last-child {

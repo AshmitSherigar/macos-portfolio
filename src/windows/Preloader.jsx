@@ -4,33 +4,23 @@ import { useRef } from 'react';
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
   const loadingRef = useRef();
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 200);
+  const barRef = useRef();
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    gsap.to(barRef.current, {
+      width: '100%',
+      duration: 4,
+      ease: 'power2.in',
+      onComplete: () => {
+        gsap.to(loadingRef.current, {
+          opacity: 0,
+          duration: 0.3,
+          onComplete: () => setIsLoading(false),
+        });
+      },
+    });
   }, []);
-
-  useEffect(() => {
-    if (progress === 100) {
-      gsap.to(loadingRef.current, {
-        opacity: 0,
-        duration: 0.4,
-        onComplete: () => {
-          setIsLoading(false);
-        },
-      });
-    }
-  }, [progress]);
 
   if (!isLoading) return null;
 
@@ -48,8 +38,9 @@ const Preloader = () => {
         {/* Loading Bar*/}
         <div className="h-2 w-75 bg-[#737373]">
           <div
-            className="h-full bg-white transition duration-400 ease-in-out"
-            style={{ width: `${progress}%` }}
+            ref={barRef}
+            className="h-full bg-white"
+            style={{ width: '0%' }}
           />
         </div>
       </div>
