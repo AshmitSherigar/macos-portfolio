@@ -17,13 +17,13 @@ const Text = () => {
         <WindowControls target={'txtfile'} />
         <h3>{name}</h3>
       </div>
-      <div className="p-5 space-y-6 bg-white">
+      <div className="p-3 space-y-6 bg-white">
         {image ? (
           <div className="w-full flex items-center justify-center">
             <img
               src={image}
               alt={name}
-              className=" w-[25vw] h-[45vh] rounded-4xl"
+              className=" w-[25vw] h-[45vh] rounded-3xl"
             />
           </div>
         ) : null}
@@ -33,11 +33,11 @@ const Text = () => {
         {Array.isArray(description) && description.length > 0 ? (
           <div
             className={clsx(
-              image && subtitle && description ? 'overflow-y-scroll h-35' : '',
+              image && subtitle && description ? 'overflow-y-scroll h-50' : '',
             )}
           >
             {description.map((para, idx) => (
-              <p key={idx}>{para}</p>
+              <p className="text-xl" key={idx}>{para}</p>
             ))}
           </div>
         ) : null}
